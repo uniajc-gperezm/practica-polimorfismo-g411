@@ -10,6 +10,8 @@ public class main {
         equipo1.setPais("Italia");
         equipo1.setTiempoTotalEquipo(12);
 
+        System.out.println("*******************\n");
+
         imprimirDatosEquipo(equipo1);
     }
     public static void imprimirDatosEquipo(Equipo equipo) {
