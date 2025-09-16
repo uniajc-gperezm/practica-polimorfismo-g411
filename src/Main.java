@@ -1,47 +1,44 @@
-class Animal {
-
-  public String nombre = "Animal";
-
-  public void hacerSonido() {
-    System.out.println("El animal hace un sonido.");
-  }
-}
-
-class Perro extends Animal {
-
-  public String nombre = "Pepito";
-
-  @Override
-  public void hacerSonido() {
-    System.out.println("El perro dice: Guau!");
-  }
-
-  public void mostrarTruco() {
-    System.out.println("El perro hace un truco.");
-  }
-}
+import Ciclista.Contrarrelojista;
+import Ciclista.Escalador;
+import Ciclista.Velocista;
+import Equipo.Equipo;
 
 public class Main {
   public static void main(String[] args) {
-    // Conversion ascendente (upcasting) - implícita Un objeto Perro se trata como
-    // un Animal
-    Animal miAnimal = new Perro(); // Crea un objeto Animal
+     // 1. Crear un equipo
+        Equipo equipo = new Equipo("Movistar Team", "España");
 
-    Animal miPerros = miAnimal;
+        // 2. Crear y agregar ciclistas de diferentes tipos
+        Velocista velocista1 = new Velocista(101, "Fernando Gaviria", 400.0, 75.0);
+        velocista1.setTiempoAcumulado(180);
 
-    System.out.println(miAnimal);
-    System.out.println(miPerros);
+        Escalador escalador1 = new Escalador(202, "Nairo Quintana", 25.0f, 10.0f);
+        escalador1.setTiempoAcumulado(320);
+        
+        Contrarrelojista cr1 = new Contrarrelojista(303, "Filippo Ganna", 55.0);
+        cr1.setTiempoAcumulado(150);
+        
+        equipo.añadirCiclista(velocista1);
+        equipo.añadirCiclista(escalador1);
+        equipo.añadirCiclista(cr1);
 
-    // Conversion descendente (downcasting) - explícita Un objeto Animal se trata
-    // como un Perro
-    // Ahora miAnimal apunta a un objeto Animal, no a un Perro
-    if (miAnimal instanceof Perro) {
-      Perro miPerro = (Perro) miAnimal; // Esto lanzará una excepción en tiempo de ejecución
-      miPerro.hacerSonido(); // Muestra "El perro dice: Guau!"
-      miPerro.mostrarTruco(); // Error en tiempo de ejecución
-    } else {
-      System.out.println("miAnimal no es una instancia de Perro.");
-    }
+        // 3. Probar los métodos del equipo
+        equipo.imprimirDatosEquipo(); // Imprime datos iniciales (tiempo 0)
+        System.out.println();
+
+        equipo.calcularTotalTiempos(); // Calcula la suma de tiempos
+        
+        equipo.listarNombresCiclistas(); // Muestra la lista de nombres
+        System.out.println();
+
+        // 4. Buscar e imprimir datos de un ciclista (uno que existe y uno que no)
+        equipo.buscarCiclista(); // Buscar a Nairo Quintana
+        equipo.buscarCiclista(); // Buscar un ciclista que no existe
+        
+        // 5. Demostración del método imprimirTipo() de un ciclista
+        //System.out.println("\n--- Tipo de Ciclista ---");
+        //System.out.println(velocista1.getNombre() + ": " + velocista1.imprimirTipo());
+    
 
   }
 }
