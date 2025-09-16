@@ -1,5 +1,4 @@
-import Ciclista.Ciclista;
-
+package Ciclista;
 public class Escalador extends Ciclista {
 
     //Variables

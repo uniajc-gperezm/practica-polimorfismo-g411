@@ -1,5 +1,4 @@
-import Ciclista.Ciclista;
-
+package Ciclista;
 public class Contrarrelojista extends Ciclista{
 
     //Variables

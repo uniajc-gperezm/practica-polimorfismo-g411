@@ -1,3 +1,6 @@
+import Ciclista.Contrarrelojista;
+import Ciclista.Escalador;
+import Ciclista.Velocista;
 import Equipo.Equipo;
 
 public class Prueba {
