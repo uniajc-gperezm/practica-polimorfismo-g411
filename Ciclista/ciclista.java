@@ -1,9 +1,10 @@
-public abstract class ciclista {
+
+public abstract class Ciclista {
     private String nombre;
     private int id;
     private int tiempoAcumuladoMinutos = 0;
 
-    public ciclista(String nombre, int id) {
+    public Ciclista(String nombre, int id) {
         this.nombre = nombre;
         this.id = id;
     }
@@ -32,10 +33,15 @@ public abstract class ciclista {
         this.tiempoAcumuladoMinutos = tiempo;
     }
 
-    public abstract void imprimirTipo();
+    public abstract String imprimirTipo();
 
     public void imprimirDatos() {
-        System.out.println(
-                "Ciclista: " + nombre + " | ID: " + id + " | Tiempo Acumulado: " + tiempoAcumuladoMinutos + " minutos");
+        
+        System.out.println("---- Información del Ciclista ----");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("ID: " + id);
+        System.out.println("Tiempo Acumulado (minutos): " + tiempoAcumuladoMinutos);
+        
+        
     }
 }

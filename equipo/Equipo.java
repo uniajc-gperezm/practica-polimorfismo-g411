@@ -1,11 +1,13 @@
 
 import java.util.List;
+import java.util.Scanner;
+import paquete.Ciclista;
 
 public class Equipo {
     private String nombreEquipo;
     private String paisOrigen;
     private static int tiempoTotalEquipo;
-    private List<ciclista> ciclistas;
+    private List<Ciclista> ciclistas;
 
     public String getNombreEquipo() {
         return nombreEquipo;
@@ -31,11 +33,11 @@ public class Equipo {
         Equipo.tiempoTotalEquipo = tiempo;
     }
 
-    public List<ciclista> getCiclistas() {
+    public List<Ciclista> getCiclistas() {
         return ciclistas;
     }
 
-    public void setCiclistas(List<ciclista> ciclistas) {
+    public void setCiclistas(List<Ciclista> ciclistas) {
         this.ciclistas = ciclistas;
     }
 
@@ -43,25 +45,30 @@ public class Equipo {
         System.out.println("Equipo: " + nombreEquipo + " | País de Origen: " + paisOrigen
                 + " | Tiempo Total del Equipo: " + tiempoTotalEquipo + " minutos");
         System.out.println("Ciclistas del equipo:");
-        for (ciclista c : ciclistas) {
+        for (Ciclista c : ciclistas) {
             c.imprimirDatos();
         }
     }
 
     public void listarNombresCiclistas() {
         System.out.println("Nombres de los ciclistas en el equipo " + nombreEquipo + ":");
-        for (ciclista c : ciclistas) {
+        for (Ciclista c : ciclistas) {
             System.out.println("- " + c.getNombre());
         }
     }
 
     public void imprimirDatosCiclistaPorid(int id) {
-        for (ciclista c : ciclistas) {
+        Scanner scanner = new Scanner(System.in);
+        int contador = 0;
+        System.out.println("Ingrese el ID del ciclista que desea buscar:");
+        for (Ciclista c : ciclistas) {
             if (c.getId() == id) {
                 c.imprimirDatos();
                 return;
             }
         }
-        System.out.println("No se encontró un ciclista con ID: " + id);
+        if (contador == 0) {
+            System.out.println("No se encontró un ciclista con ID: " + id);
+        }
     }
 }
