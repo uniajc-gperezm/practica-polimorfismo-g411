@@ -1,7 +1,10 @@
-package models;
+package equipo;
+
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ciclista.Ciclista;
 
 public class Equipo {
     private String nombreEquipo;

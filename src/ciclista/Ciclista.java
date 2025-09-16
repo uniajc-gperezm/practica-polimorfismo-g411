@@ -1,4 +1,4 @@
-package models;
+package ciclista;
 
 public abstract class Ciclista {
     private int identificador;
@@ -37,6 +37,6 @@ public abstract class Ciclista {
     }
 
     public void imprimirDatos() {
-        
+
     }
 }
