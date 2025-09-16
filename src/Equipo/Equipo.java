@@ -40,7 +40,7 @@ public class Equipo {
         return tiempoTotalEquipo;
     }
 
-    public static void setTiempoTotalEquipo ( int tiempoTotalEquipo){  //que pertenece a la CLASE Equipo, no a una instancia específica.
+    public static void setTiempoTotalEquipo ( int tiempoTotalEquipo){  
         Equipo.tiempoTotalEquipo = tiempoTotalEquipo;
     }
 
@@ -82,6 +82,11 @@ public class Equipo {
         }
         
         System.out.println("No se encontró ningún ciclista con el ID: " + id);
+    }
+
+    public void setIdentificador(int nextInt) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setIdentificador'");
     }
     
 }

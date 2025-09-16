@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 import Ciclista.Contrarrelojista;
 import Ciclista.Escalador;
 import Ciclista.Velocista;
@@ -34,10 +36,11 @@ public class Prueba {
         //Buscar Ciclista
         System.out.println("\n Búsqueda por Id = David");
         equipo1.imprimirDatosCiclistaPorId(2);
-
-        //Buscar ciclista
-        System.out.println("\n Búsqueda por Id = Alexander");
-        equipo1.imprimirDatosCiclistaPorId(1);
+        
+        //Pendiente revisar - aparece error 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese el Id del ciclista");
+        equipo1.setIdentificador(sc.nextInt());
 
         //Probar en caso de que  no hayan ciclistas
         System.out.println("\n--- Búsqueda por ID pero que no esta ) ---");
