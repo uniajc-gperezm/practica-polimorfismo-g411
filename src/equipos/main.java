@@ -3,7 +3,7 @@ package equipos;
 import ciclistas.*;
 import equipos.*;
 
-public class App {
+public class main {
     public static void main(String[] args) throws Exception {
         Equipo equipo1 = new Equipo();
         equipo1.setNombreEquipo("Ineos");
