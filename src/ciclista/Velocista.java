@@ -27,6 +27,7 @@ public class Velocista extends Ciclista {
         this.velocidadPromedioSprint = velocidadPromedioSprint;
     }
 
+    @Override
     public void imprimirTipo() {
         
     }
