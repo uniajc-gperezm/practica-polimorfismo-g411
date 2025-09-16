@@ -124,7 +124,7 @@ public class App {
                                     System.out.println("3. Contrarrelojista");
                                     opc4 = sc.nextInt();
                                     switch (opc4) {
-                                        case 1:
+                                        case 1 -> {
                                             System.out.println("Digite el id del ciclista");
                                             id = sc.nextInt();
                                             sc.nextLine();
@@ -136,8 +136,8 @@ public class App {
                                             double velocidad = sc.nextDouble();
                                             Ciclista velocista = new Velocista(id, nombreCiclista, potencia, velocidad);
                                             equipo2.añadirCiclista(velocista);
-                                            break;
-                                        case 2:
+                                    }
+                                        case 2 -> {
                                             System.out.println("Digite el id del ciclista");
                                             id = sc.nextInt();
                                             sc.nextLine();
@@ -149,8 +149,8 @@ public class App {
                                             float rampa = sc.nextFloat();
                                             Ciclista escalador = new Escalador(id, nombreCiclista, aceleracion, rampa);
                                             equipo2.añadirCiclista(escalador);
-                                            break;
-                                        case 3:
+                                    }
+                                        case 3 -> {
                                             System.out.println("Digite el id del ciclista");
                                             id = sc.nextInt();
                                             sc.nextLine();
@@ -161,9 +161,9 @@ public class App {
                                             Ciclista contrarrelojista = new Contrarrelojista(id, nombreCiclista,
                                                     velocidadM);
                                             equipo2.añadirCiclista(contrarrelojista);
-                                            break;
-                                        default:
-                                            break;
+                                    }
+                                        default -> {
+                                    }
                                     }
                                 }
                                 case 4 -> {
