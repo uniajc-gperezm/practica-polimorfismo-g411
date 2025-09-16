@@ -1,3 +1,4 @@
+package ciclistas;
 public abstract class Ciclista {
     private int indentificador;
     private String nombre;

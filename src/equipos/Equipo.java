@@ -1,5 +1,8 @@
+package equipos;
 import java.util.ArrayList;
 import java.util.List;
+
+import ciclistas.Ciclista;
 
 public class Equipo {
     private String nombreEquipo;
@@ -7,35 +10,35 @@ public class Equipo {
     private static int tiempoTotalEquipo;
     private List<Ciclista> ciclistas = new ArrayList<>();
 
-    protected String getNombreEquipo() {
+    public String getNombreEquipo() {
         return this.nombreEquipo;
     }
 
-    protected void setNombreEquipo(String nombreEquipo) {
+    public void setNombreEquipo(String nombreEquipo) {
         this.nombreEquipo = nombreEquipo;
     }
 
-    protected String getPais() {
+    public String getPais() {
         return this.pais;
     }
 
-    protected void setPais(String pais) {
+    public void setPais(String pais) {
         this.pais = pais;
     }
 
-    protected int getTiempoTotalEquipo() {
+    public int getTiempoTotalEquipo() {
         return tiempoTotalEquipo;
     }
 
-    protected void setTiempoTotalEquipo(int tiempo) {
+    public void setTiempoTotalEquipo(int tiempo) {
         this.tiempoTotalEquipo = tiempo;
     }
 
-    protected List<Ciclista> getCiclistas() {
+    public List<Ciclista> getCiclistas() {
         return this.ciclistas;
     }
 
-    protected void setCiclistas(List<Ciclista> ciclistas) {
+    public void setCiclistas(List<Ciclista> ciclistas) {
         this.ciclistas = ciclistas;
     }
      

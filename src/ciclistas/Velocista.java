@@ -1,3 +1,4 @@
+package ciclistas;
 public class Velocista extends Ciclista {
     private double potenciaPromedio;
     private double velocidadPromedioSprint;
